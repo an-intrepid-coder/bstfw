@@ -18,17 +18,21 @@ exactly <- function(k, n, p) {
     return(choose(n, k) * (p^k) * ((1 - p)^(n-k)))
 }
 
+atLeast <- function(k, n, p) {
+   return(pbinom(k - 1, n, p, lower.tail=FALSE))
+}
+
 deckSize <- 52
 
 numAces <- 4
 
 pDrawAce <- numAces / deckSize
 
-pAtLeastOneAceInFivePulls <- pbinom(0, 5, pDrawAce, lower.tail=FALSE)
+pAtLeastOneAceInFivePulls <- atLeast(1, 5, pDrawAce)
 
 pExactlyOneAceInFivePulls <- exactly(1, 5, pDrawAce)
 
-pAtLeastFiveAcesInTenPulls <- pbinom(4, 10, pDrawAce, lower.tail=FALSE)
+pAtLeastFiveAcesInTenPulls <- atLeast(5, 10, pDrawAce)
 
 pExactlyFiveAcesInTenPulls <- exactly(5, 10, pDrawAce)
 

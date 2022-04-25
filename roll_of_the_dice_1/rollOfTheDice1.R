@@ -4,6 +4,10 @@ exactly <- function(k, n, p) {
     return(choose(n, k) * (p^k) * ((1 - p)^(n-k)))
 }
 
+atLeast <- function(k, n, p) {
+   return(pbinom(k - 1, n, p, lower.tail=FALSE))
+}
+
 # The probability of rolling a d20 and getting a 1 or 5:
 p1 <- .1
 
@@ -40,7 +44,7 @@ for (i in 1:n) {
 # if lower.tail=TRUE then it is summing the values less than or equal
 # to the first parameter. To make it determine the chance for something
 # happening at least once, it sums all values in 1:n.
-p3a <- pbinom(0, n, p1, lower.tail=FALSE)
+p3a <- atLeast(1, n, p1)
 
 # Note: Comparing p2 == p2a directly will return FALSE.
 # Casting them to integers beforehand returns TRUE.
