@@ -1,5 +1,9 @@
 # Expanding on Chapter 4, Ex. 1 from "Bayesian Statistics the Fun Way"
 
+exactly <- function(k, n, p) {
+    return(choose(n, k) * (p^k) * ((1 - p)^(n-k)))
+}
+
 # The probability of rolling a d20 and getting a 1 or 5:
 p1 <- .1
 
@@ -17,7 +21,7 @@ n <- 12
 # If we assume the question to mean "exactly" one instance of rolling a
 # 1 or a 20 then it is:
 k <- 1
-p2 <- choose(n, k) * (p1^k) * ((1 - p1)^(n-k))
+p2 <- exactly(k, n, p1)
 
 # The wording in the question does not specify "at least" one instance of
 # a 1 or a 20. But, if it did, then it could be calculated in the same way 
@@ -28,8 +32,7 @@ p2 <- choose(n, k) * (p1^k) * ((1 - p1)^(n-k))
 # sum(B(k; n, p) = choose(n, k) * p^k * (1 - p)^(n-k) for all k in 1:n) :
 p3 <- 0
 for (i in 1:n) {
-    a <- choose(n, i) * (p1^i) * ((1 - p1)^(n-i))
-    p3 <- p3 + a
+    p3 <- p3 + exactly(i, n, p1)
 }
 
 # Computing with pbinom for comparison. When lower.tail=FALSE, 
