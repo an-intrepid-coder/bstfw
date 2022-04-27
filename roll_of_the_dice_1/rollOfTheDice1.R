@@ -46,10 +46,9 @@ for (i in 1:n) {
 # happening at least once, it sums all values in 1:n.
 p3a <- atLeast(1, n, p1)
 
-# Note: Comparing p3 == p3a directly will return FALSE.
-# Casting them to integers beforehand returns TRUE.
-print(as.integer(p3) == as.integer(p3a)) # TRUE
-
+# Note: Comparing p3 == p3a directly will return FALSE. You must use all.equal() to compare floating point numbers:
+all.equal(p3, p3a)
+        
 # As demonstrated above, the method for computing 
 # "at least x events out of n trials" in BStFW
 # is consistent between the long-form method
@@ -58,8 +57,17 @@ print(as.integer(p3) == as.integer(p3a)) # TRUE
 
 # The results of the experiments:
 data <- data.frame(
-    "experiment"=c("exactly once", "at least once"), 
-    "result"=c(p2, p3)
+    "experiment"=c(
+        "p(exactly once)", 
+        "p(at least once)-A", 
+        "p(at least once)-B"
+    ),
+    "result"=c(
+        p2, 
+        p3,
+        p3a
+    )
 )
+
 print(data)
 
