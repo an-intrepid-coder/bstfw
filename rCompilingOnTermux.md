@@ -7,30 +7,25 @@
 
 **More Information**: This is a short guide based on the information found here. There is a lot I am not covering. I will expand this short guide as I learn more. This is only intended as a quick start guide for getting R running on Termux for following along with some exercises in *Bayesian Statistics the Fun Way*. Link to more in-depth info:
 
-https://cran.r-project.org/doc/manuals/r-release/\
-R-admin.html#Getting-and-unpacking-the-sourcee://\
-cran.r-project.org/doc/manuals/r-release/R-admin.\
-html
+[Official Docs](https://cran.r-project.org/doc/manuals/r-release/R-admin.html)
 
 ---
 
-**Prerequisites**: Depending on what's already installed, there may be a need to install some required packages. I found it necessary to install `openjdk-17` as well as `libgfortran5` from the Termux repositories. Any dependcy warnings in the next steps can generally be resolved with `pkg search` and `pkg install`. 
+**Prerequisites**: Depending on what's already installed, there may be a need to install some required packages. I found it necessary to install `openjdk-17` as well as `libgfortran5` from the Termux repositories. Any dependency warnings in the next steps can generally be resolved with `pkg search` and `pkg install`. The following link gives more comprehensive information:
 
-The following link gives more comprehensive information: \
-https://cran.r-project.org/doc/manuals/r-release/R \
--admin.html#Essential-programs-and-libraries
+[Docs#Dependencies](https://cran.r-project.org/doc/manuals/r-release/R-admin.html#Essential-programs-and-libraries)
 
 ---
 
 **Termux:** It is assumed that you've already installed Termux on your phone. As of this writing, Termux's latest supported versions are to be found in the F-DROID repositories. Link:
 
-https://wiki.termux.com/wiki/Installing_from_F-Droid
+[F-Droid#Termux](https://wiki.termux.com/wiki/Installing_from_F-Droid)
 
 ---
 
 **Download Source**: Get the source for the latest R version (`4.2.0` as of this writing). Choose an appropriate mirror from the following address:
 
-https://cran.r-project.org/mirrors.html
+[Docs#Mirrors](https://cran.r-project.org/mirrors.html)
 
 ---
 
@@ -42,8 +37,7 @@ https://cran.r-project.org/mirrors.html
 
 Note: It may be worth looking in to the official documentation. I may not have covered everything for your use case. Here is a link for digging deeper:
 
-https://cran.r-project.org/doc/manuals/r-release/\
-R-admin.html#Compile-and-load-flags
+[Docs#Flags](https://cran.r-project.org/doc/manuals/r-release/R-admin.html#Compile-and-load-flags)
 
 ---
 
@@ -55,7 +49,7 @@ The desired directory to add to `PATH` should be `<location of source tarball>/<
 
 **X Server Support**: In order to use all of the plotting functionality of R, you'll need an X Server. I followed the instructions here, and found them accurate: 
 
-https://wiki.termux.com/wiki/Graphical_Environment
+[TermuxWiki#X](https://wiki.termux.com/wiki/Graphical_Environment)
 
 ---
 
