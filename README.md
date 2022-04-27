@@ -1,7 +1,5 @@
 # Bayesian Statistics the Fun Way (by Will Kurt)
-### (selected exercises from or related to or inspired by)
+(selected exercises from or related to or inspired by)
 
-**TODO**: 
-
-* Detailed, up to date guide for installing R on termux. Including compiling from source. 
+NOTE: I do not have a background in statistics. This is a learning project for me. It is also a chance to dabble in R, and explore that ecosystem. If anyone finds an error then please correct me. If anyone finds these of value then please enjoy.
 
