@@ -46,7 +46,7 @@ for (i in 1:n) {
 # happening at least once, it sums all values in 1:n.
 p3a <- atLeast(1, n, p1)
 
-# Note: Comparing p2 == p2a directly will return FALSE.
+# Note: Comparing p3 == p3a directly will return FALSE.
 # Casting them to integers beforehand returns TRUE.
 print(as.integer(p3) == as.integer(p3a)) # TRUE
 
