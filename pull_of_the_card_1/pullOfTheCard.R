@@ -14,13 +14,7 @@
 # replacement, so the drawn card is shuffled back
 # in to the deck before the next one.
 
-exactly <- function(k, n, p) {
-    return(choose(n, k) * (p^k) * ((1 - p)^(n-k)))
-}
-
-atLeast <- function(k, n, p) {
-   return(pbinom(k - 1, n, p, lower.tail=FALSE))
-}
+source("../functions.R")
 
 deckSize <- 52
 

@@ -1,12 +1,6 @@
 # Exercises 4 and 5 from Chapter 4:
 
-exactly <- function(k, n, p) {
-    return(choose(n, k) * (p^k) * ((1 - p)^(n-k)))
-}
-
-atLeast <- function(k, n, p) {
-   return(pbinom(k - 1, n, p, lower.tail=FALSE))
-}
+source("../functions.R")
 
 # The first scenario is asking what the
 # chance of getting >=2 job offers in a month

@@ -31,7 +31,7 @@ pInRange <- function(s, f, lo, hi) {
 # This function wraps pInRange with bounds of
 # [.45, .55]. This is a rough approximation of
 # fairness.
-fairness <- function(a, b) {
-    return(pInRange(a, b, .45, .55))
+fairness <- function(s, f) {
+    return(pInRange(s, f, .45, .55))
 }        
 
