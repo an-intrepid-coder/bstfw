@@ -1,9 +1,17 @@
-# Expanding on Chapter 4, Ex. 1 from "Bayesian Statistics the Fun Way"
+# Expanding on Chapter 4, Ex. 1 from "Bayesian 
+# Statistics the Fun Way"
 
+# Returns B(k; n, p).
+# Or, the chance of exactly k events occurring in 
+# n trials with probability p:
 exactly <- function(k, n, p) {
     return(choose(n, k) * (p^k) * ((1 - p)^(n-k)))
 }
 
+# Returns sum(B(k; n, p) for all k in 1:n).
+# Or, the chance of at least k events happening
+# given n trials and probability p of the event 
+# occuring:
 atLeast <- function(k, n, p) {
    return(pbinom(k - 1, n, p, lower.tail=FALSE))
 }
@@ -46,7 +54,8 @@ for (i in 1:n) {
 # happening at least once, it sums all values in 1:n.
 p3a <- atLeast(1, n, p1)
 
-# Note: Comparing p3 == p3a directly will return FALSE. You must use all.equal() to compare floating point numbers:
+# Note: Comparing p3 == p3a directly will return FALSE.
+# You must use all.equal() to compare floating point numbers:
 all.equal(p3, p3a)
         
 # As demonstrated above, the method for computing 
