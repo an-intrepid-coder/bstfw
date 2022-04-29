@@ -28,3 +28,10 @@ pInRange <- function(s, f, lo, hi) {
     return(integrate(fn, lo, hi)$value)
 }
 
+# This function wraps pInRange with bounds of
+# [.45, .55]. This is a rough approximation of
+# fairness.
+fairness <- function(a, b) {
+    return(pInRange(a, b, .45, .55))
+}        
+
