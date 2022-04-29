@@ -45,7 +45,7 @@ p1 <- pInRange(heads, tails, .6, 1) # about 10%
 
 # The next exercise has the coin flip ten more 
 # times, until it is 9 heads and 11 tails.
-# It than asks if the coin seems fair within a 
+# It then asks if the coin seems fair within a 
 # margin of error of 5%.
 heads <- 9
 tails <- 11
